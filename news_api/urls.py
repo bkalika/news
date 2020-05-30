@@ -16,14 +16,17 @@ urlpatterns = format_suffix_patterns(
         path("post/<int:pk>/vote/", views.VotePostViewSet.as_view({"put": "update"})),
         path(
             "comments/",
-            views.CommentViewSet.as_view(
-                {"get": "list", "post": "create"}
-            ),
+            views.CommentViewSet.as_view({"get": "list", "post": "create"}),
         ),
         path(
             "comments/<int:pk>/",
             views.CommentViewSet.as_view(
-                {"get": "retrieve", "delete": "destroy", "put": "update", "post": "create"}
+                {
+                    "get": "retrieve",
+                    "delete": "destroy",
+                    "put": "update",
+                    "post": "create",
+                }
             ),
         ),
     ]

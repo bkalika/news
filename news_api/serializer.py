@@ -5,8 +5,9 @@ from .models import Post, Comment
 
 class CommentParentSerializer(serializers.ModelSerializer):
     """Comment serializer"""
-    post = serializers.SlugRelatedField(slug_field='title', read_only=True)
-    post_link = serializers.SerializerMethodField('get_link_from_post')
+
+    post = serializers.SlugRelatedField(slug_field="title", read_only=True)
+    post_link = serializers.SerializerMethodField("get_link_from_post")
 
     class Meta:
         model = Comment
@@ -35,6 +36,7 @@ class PostSerializer(serializers.ModelSerializer):
 
 class PostDetailSerializer(serializers.ModelSerializer):
     """Post detail serializer"""
+
     comments = CommentParentSerializer(many=True)
 
     class Meta:
@@ -45,6 +47,17 @@ class PostDetailSerializer(serializers.ModelSerializer):
 class VotePostSerializer(serializers.ModelSerializer):
     """Vote the post"""
 
+    class Meta:
+        model = Post
+        fields = ("id", "vote")
+
+    def update(self, instance, validated_data):
+        instance.vote += 1
+        instance.save()
+        return instance
+
+
+class DeleteVotes(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ("id", "vote")

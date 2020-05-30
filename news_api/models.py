@@ -1,6 +1,5 @@
 from datetime import datetime
 
-from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -13,7 +12,7 @@ class Post(models.Model):
     vote = models.SmallIntegerField(
         "Amount of votes", default=0, help_text="to vote the post"
     )
-    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    author = models.CharField("Author", max_length=150)
 
     def __str__(self):
         return self.title
@@ -28,7 +27,7 @@ class Post(models.Model):
 class Comment(models.Model):
     """Comment"""
 
-    author_name = models.CharField("Author name", max_length=150)
+    author_name = models.CharField("Author", max_length=150)
     content = models.TextField("Content", max_length=500)
     creating_date = models.DateTimeField("Creating date", default=datetime.now)
     post = models.ForeignKey(

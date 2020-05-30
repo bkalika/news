@@ -44,7 +44,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"title\": \"New post11\",\n\t\"link\": \"new_list11\",\n\t\"author\": 1\n}\n",
+					"raw": "{\n\t\"title\": \"New post2\",\n\t\"link\": \"new_list2\",\n\t\"author\": \"Artur\"\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -70,7 +70,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"title\": \" Post updated9\",\n\t\"link\": \"post_updated9\",\n\t\"author\": 1\n}\n",
+					"raw": "{\n\t\"title\": \" Post updated2\",\n\t\"link\": \"post_updated2\",\n\t\"author\": \"Artur\"\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -78,12 +78,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{path}}post/10/",
+					"raw": "{{path}}post/2/",
 					"host": [
 						"{{path}}post"
 					],
 					"path": [
-						"10",
+						"2",
 						""
 					]
 				}
@@ -105,12 +105,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{path}}post/6/",
+					"raw": "{{path}}post/2/",
 					"host": [
 						"{{path}}post"
 					],
 					"path": [
-						"6",
+						"2",
 						""
 					]
 				}
@@ -140,12 +140,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{path}}comments/3/",
+					"raw": "{{path}}comments/2/",
 					"host": [
 						"{{path}}comments"
 					],
 					"path": [
-						"3",
+						"2",
 						""
 					]
 				}
@@ -159,7 +159,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"author_name\": \"Bohdan\",\r\n    \"content\": \"This is amazing!3\",\r\n    \"post\": 3\r\n}\r\n",
+					"raw": "{\r\n    \"author_name\": \"Bohdan\",\r\n    \"content\": \"Python the best!\",\r\n    \"post\": 1\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -185,7 +185,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"author_name\": \"Kalika\",\r\n    \"content\": \"One of the best update2\",\r\n    \"post\": 3\r\n}",
+					"raw": "{\r\n    \"author_name\": \"Kalika\",\r\n    \"content\": \"Yeap!\",\r\n    \"post\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -193,12 +193,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{path}}comments/3/",
+					"raw": "{{path}}comments/2/",
 					"host": [
 						"{{path}}comments"
 					],
 					"path": [
-						"3",
+						"2",
 						""
 					]
 				}
@@ -250,32 +250,6 @@
 				}
 			},
 			"response": []
-		},
-		{
-			"name": "runCrone",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{path}}cron/",
-					"host": [
-						"{{path}}cron"
-					],
-					"path": [
-						""
-					]
-				}
-			},
-			"response": []
 		}
 	],
 	"event": [
@@ -302,7 +276,7 @@
 	],
 	"variable": [
 		{
-			"id": "924f67a8-7986-4096-a6d5-e642429f81ca",
+			"id": "d977c325-5488-45a8-948a-fe3d060190d1",
 			"key": "path",
 			"value": "http://127.0.0.1:8000/api/v1/",
 			"type": "string",
