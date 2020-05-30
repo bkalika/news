@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "6eb294d3-9e6d-44df-b365-3bc56d521a67",
+		"name": "NEWS-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}post",
+					"host": [
+						"{{path}}post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPostById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}post/1/",
+					"host": [
+						"{{path}}post"
+					],
+					"path": [
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"New post11\",\n\t\"link\": \"new_list11\",\n\t\"author\": 1\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}post/",
+					"host": [
+						"{{path}}post"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePost",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \" Post updated9\",\n\t\"link\": \"post_updated9\",\n\t\"author\": 1\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}post/10/",
+					"host": [
+						"{{path}}post"
+					],
+					"path": [
+						"10",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePost",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}post/6/",
+					"host": [
+						"{{path}}post"
+					],
+					"path": [
+						"6",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getComments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}comments/",
+					"host": [
+						"{{path}}comments"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCommentsById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}comments/3/",
+					"host": [
+						"{{path}}comments"
+					],
+					"path": [
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setComment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author_name\": \"Bohdan\",\r\n    \"content\": \"This is amazing!3\",\r\n    \"post\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}comments/",
+					"host": [
+						"{{path}}comments"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateComment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author_name\": \"Kalika\",\r\n    \"content\": \"One of the best update2\",\r\n    \"post\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}comments/3/",
+					"host": [
+						"{{path}}comments"
+					],
+					"path": [
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteComment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{path}}comments/9/",
+					"host": [
+						"{{path}}comments"
+					],
+					"path": [
+						"9",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addVoteToPost",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}post/3/vote/",
+					"host": [
+						"{{path}}post"
+					],
+					"path": [
+						"3",
+						"vote",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "runCrone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}cron/",
+					"host": [
+						"{{path}}cron"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a79dbd95-97e7-404e-ac16-21cec5f51e34",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1765a1cc-c021-4425-b4b2-6124c890e347",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "924f67a8-7986-4096-a6d5-e642429f81ca",
+			"key": "path",
+			"value": "http://127.0.0.1:8000/api/v1/",
+			"type": "string",
+			"disabled": true
+		}
+	],
+	"protocolProfileBehavior": {}
+}
