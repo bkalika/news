@@ -27,7 +27,13 @@ SECRET_KEY = "a)dpwb+^^*&nx8n_1$p+=)e=&haq26(9%8c8p4m2n7#di7ud^v"
 DEBUG = True
 # DEBUG = int(os.environ.get('DEBUG', default=1))
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'news-kalika.herokuapp.com', 'hidden-earth-26802.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0',
+                 'localhost',
+                 '127.0.0.1',
+                 'news-kalika.herokuapp.com',
+                 'hidden-earth-26802.herokuapp.com',
+                 'yoursupernews.herokuapp.com'
+                 ]
 
 # Application definition
 
