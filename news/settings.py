@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,8 +27,7 @@ SECRET_KEY = "a)dpwb+^^*&nx8n_1$p+=)e=&haq26(9%8c8p4m2n7#di7ud^v"
 DEBUG = True
 # DEBUG = int(os.environ.get('DEBUG', default=1))
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'news-kalika.herokuapp.com']
-
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'news-kalika.herokuapp.com', 'hidden-earth-26802.herokuapp.com']
 
 # Application definition
 
@@ -99,6 +99,9 @@ DATABASES = {
 #         "PORT": "5432",
 #     }
 # }
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
