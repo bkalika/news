@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install netcat -y
 # RUN python manage.py migrate --noinput
 
 COPY . /app
+RUN mkdir /app/static
 
 # COPY ./entrypoint.sh /app
 # RUN ["chmod", "+x", "/app/entrypoint.sh"]
